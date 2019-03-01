@@ -3,7 +3,10 @@ Documentation for the Posmo SDK
 
 ## Posmo SDK
 ### 1. Usage  
-Android Manifest and Gradle Instructions
+
+#### Android Manifest and Gradle Instructions
+#### iOS
+
 ### 2. Library Initialization with Client API Key
 ### 3. Login / Registration / Forgot Password
 ### 4. Places Search / Autocomplete Search 
