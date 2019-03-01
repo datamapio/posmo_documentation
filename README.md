@@ -13,10 +13,10 @@ TMS stands for Timeline, Map, Stats
 1. Usage
 2. Customization
 3. View Components
-		- Timeline
-		- Map
-		- Calendar
-		- (Stats)
-		- (Edit)
+  * Timeline
+  * Map
+  * Calendar
+  * (Stats)
+  * (Edit)
 
 
