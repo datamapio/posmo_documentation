@@ -15,7 +15,7 @@ allprojects {
 ```
 Add this to your module's build.gradle file
 ```
-implementation 'io.datamap:posmosdk:1.0.15'
+implementation 'io.datamap:posmosdk:1.0.16'
 ```
 
 #### iOS
