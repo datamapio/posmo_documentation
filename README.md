@@ -16,7 +16,7 @@ allprojects {
 ```
 Add this code snippet to your **module's build.gradle** file
 ```
-implementation 'io.datamap:posmosdk:1.0.18'
+implementation 'io.datamap:posmosdk:1.0.19'
 ```
 
 
@@ -40,6 +40,11 @@ PosmoSDK.login(context, "username", "password", new OnResultListener() {
                 Toast.makeText(getApplicationContext(), "Error: "+s, LENGTH_LONG ).show();
             }
         });
+```
+
+#### Logout
+```
+boolean success=PosmoSDK.logout(context);
 ```
 
 #### Registration
