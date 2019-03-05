@@ -1,11 +1,11 @@
 # Posmo Documentation
 Documentation for the Posmo SDK
 
-## Posmo SDK
+## Posmo Android SDK
 ### 1. Usage  
 #### Android Manifest and Gradle Instructions
 
-Add this in your root build.gradle file (not your module build.gradle file):
+Add this code snippet to your root build.gradle file (not the same as your module build.gradle file):
 ```
 allprojects {
     repositories {
@@ -13,15 +13,14 @@ allprojects {
     }
 }
 ```
-Add this to your module's build.gradle file
+Add this code snippet to your module's build.gradle file
 ```
 implementation 'io.datamap:posmosdk:1.0.16'
 ```
 
-#### iOS
 
-### 2. Library Initialization with Client API Key
-Dont forget to use your CLIENT_API_KEY
+### 2. Library Initialization with the Client API Key
+Dont forget to use your own CLIENT_API_KEY
 ```
  new PosmoSDK.Builder()
                 .withToken("CLIENT_API_KEY")
