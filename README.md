@@ -67,7 +67,7 @@ PosmoSDK.login(context, "username", "password", new OnResultListener() {
         });
 ```
 ### 4. Places Search / Autocomplete Search 
-**lon**(longitude) and **lat**(latitude) and can be null if the current location is unknown.
+**lon** (longitude) and **lat** (latitude) and can be null if the current location is unknown.
 ```
  PosmoSDK.placeSearch(context, "Berlin", lat, lon, new OnPlaceSearchResultListener() {
             @Override
