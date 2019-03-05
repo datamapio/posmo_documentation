@@ -5,7 +5,8 @@ Documentation for the Posmo SDK
 ### 1. Usage  
 #### Android Manifest and Gradle Instructions
 
-Add this code snippet to your root build.gradle file (not the same as your module build.gradle file):
+Add this code snippet to your **root build.gradle** file.      
+Note: This is not the same as your module build.gradle file.
 ```
 allprojects {
     repositories {
@@ -27,7 +28,7 @@ Dont forget to use your own CLIENT_API_KEY
                 .build();
 ```
 ### 3. Login / Registration / Forgot Password
-**Login**
+#### Login
 ```
 PosmoSDK.login(context, "username", "password", new OnResultListener() {
             @Override
@@ -41,7 +42,7 @@ PosmoSDK.login(context, "username", "password", new OnResultListener() {
         });
 ```
 
-**Registration**
+#### Registration
 ```
  PosmoSDK.register(context, "username", "password", new OnResultListener() {
             @Override
@@ -53,7 +54,7 @@ PosmoSDK.login(context, "username", "password", new OnResultListener() {
         });
 ```
 
-**Forgot password**
+#### Forgot password
 ```
   PosmoSDK.forgotPassword(context, "email", new OnForgotPassResultListener() {
             @Override
@@ -66,7 +67,7 @@ PosmoSDK.login(context, "username", "password", new OnResultListener() {
         });
 ```
 ### 4. Places Search / Autocomplete Search 
-**lat** and **lon** can be null if current location is unknown
+**lon**(longitude) and **lat**(latitude) and can be null if the current location is unknown.
 ```
  PosmoSDK.placeSearch(context, "Berlin", lat, lon, new OnPlaceSearchResultListener() {
             @Override
@@ -80,6 +81,7 @@ PosmoSDK.login(context, "username", "password", new OnResultListener() {
             }
         });
 ```
+
 ## Posmo TMS Library
 TMS stands for Timeline, Map, Stats
 ### 1. Usage
