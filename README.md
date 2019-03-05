@@ -67,7 +67,20 @@ PosmoSDK.login(context, "username", "password", new OnResultListener() {
         });
 ```
 ### 4. Places Search / Autocomplete Search 
+**lat** and **lon** can be null if current location is unknown
+```
+ PosmoSDK.placeSearch(context, "Berlin", lat, lon, new OnPlaceSearchResultListener() {
+            @Override
+            public void onResult(io.datamap.posmosdk.PlacesAPI.APIResponse apiResponse) {
+                
+            }
 
+            @Override
+            public void onResultError(String s) {
+
+            }
+        });
+```
 ## Posmo TMS Library
 TMS stands for Timeline, Map, Stats
 ### 1. Usage
