@@ -74,7 +74,7 @@ boolean success=PosmoSDK.logout(context);
 ### 4. Places Search / Autocomplete Search 
 **lon** (longitude) and **lat** (latitude) and can be null if the current location is unknown.
 ```
- PosmoSDK.placeSearch(context, "Berlin", lat, lon, new OnPlaceSearchResultListener() {
+ PosmoSDK.placeSearch(context, "Bellinzona", lat, lon, new OnPlaceSearchResultListener() {
             @Override
             public void onResult(io.datamap.posmosdk.PlacesAPI.APIResponse apiResponse) {
                 
