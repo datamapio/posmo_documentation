@@ -16,7 +16,7 @@ allprojects {
 ```
 Add this code snippet to your **module's build.gradle** file
 ```
-implementation 'io.datamap:posmosdk:1.0.19'
+implementation 'io.datamap:posmosdk:1.0.27'
 ```
 
 
@@ -90,6 +90,85 @@ boolean success=PosmoSDK.logout(context);
 ## Posmo TMS Library
 TMS stands for Timeline, Map, Stats
 ### 1. Usage
+#### Android Manifest and Gradle Instructions
+
+Add this code snippet to your **root build.gradle** file.      
+Note: This is not the same as your module build.gradle file.
+```
+allprojects {
+    repositories {
+        maven { url 'https://jitpack.io' }
+        maven { url "https://nexus.datamap.io/repository/maven-releases/" }
+    }
+}
+```
+Add this code snippet to your **module's build.gradle** file
+```
+implementation 'io.datamap:posmotmsview:1.0.6'
+```
+#### Layout file
+```
+<RelativeLayout
+        android:id="@+id/insideFrameContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <io.datamap.posmotmview.PosmoTMView
+            android:id="@+id/posmoTMView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+</RelativeLayout>
+```
+
+#### Inside Fragment or Activity
+```
+ @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+
+        //Find view which is defined in layout
+        PosmoTMView posmoTMView = view.findViewById(R.id.posmoTMView);
+
+        //Listener for calendar toogle
+        posmoTMView.setOnCalendarToogle(new OnCalendarToogle() {
+            @Override
+            public void calendarHidden() {
+            }
+
+            @Override
+            public void calendarShow() {
+            }
+        });
+
+        //Option for saving state of calendar
+        posmoTMView.setSaveState(true);
+
+        //Start foreground service
+        PosmoSDK.startService( getContext());
+
+        //Providing fragment manager
+        posmoTMView.setFragmentManager(getFragmentManager(), R.id.frameLayout);
+
+    }
+```
+
+#### Android manifest
+Boot receiver for automatic starting service after booting.
+```
+  <receiver android:name="io.datamap.posmosdk.services.BootReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
+```
+Declaration of service.
+```
+        <service
+            android:name="io.datamap.posmosdk.services.PosmoServiceV2"
+            >
+        </service>
+```
 ### 2. Customization
 ### 3. View Components
 * Timeline
