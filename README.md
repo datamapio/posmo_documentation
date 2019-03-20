@@ -154,7 +154,7 @@ implementation 'io.datamap:posmotmsview:1.0.6'
 ```
 
 #### Android manifest
-Boot receiver for automatic starting service after booting.
+Boot Receiver to automatically start the service after booting.
 ```
   <receiver android:name="io.datamap.posmosdk.services.BootReceiver">
             <intent-filter>
