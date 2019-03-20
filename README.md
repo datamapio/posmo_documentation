@@ -89,8 +89,8 @@ boolean success=PosmoSDK.logout(context);
 
 ## Posmo TMS Library
 TMS stands for Timeline, Map, Stats
-![Screenshot_2019-03-20-15-52-59-336_io datamap posmo](https://user-images.githubusercontent.com/11587927/54697362-b5f73780-4b2d-11e9-99ee-4598514367d2.png)
-![Screenshot_2019-03-20-15-53-02-396_io datamap posmo](https://user-images.githubusercontent.com/11587927/54697368-b7286480-4b2d-11e9-91d1-fe9625d2040a.png)
+![Webp net-resizeimage (1)](https://user-images.githubusercontent.com/11587927/54697494-f6ef4c00-4b2d-11e9-8aee-09e1c1d600b4.png)
+![Webp net-resizeimage](https://user-images.githubusercontent.com/11587927/54697501-f787e280-4b2d-11e9-9dc1-0c1ec4b3723d.png)
 
 ### 1. Usage
 #### Android Manifest and Gradle Instructions
