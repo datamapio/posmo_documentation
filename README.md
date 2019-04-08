@@ -1,6 +1,9 @@
 # Posmo Documentation
 Documentation for the Posmo SDK
 
+[JavaDoc Posmo SDK](https://sdk-docs.datamap.io/io/datamap/posmosdk/PosmoSDK.html)
+
+
 ## Posmo Android SDK
 ### 1. Usage  
 #### Android Manifest and Gradle Instructions
