@@ -6,12 +6,12 @@ pipeline {
               echo "Deploying now"
 
               echo "compress files"
-              sh "tar -czf sdk-docs-${env.BUILD_ID}.tar.gz ."
+              sh "tar -cvf sdk-docs-${env.BUILD_ID}.tar ."
 
               echo "copy build"
               sh "ssh staging mkdir /var/www/sdk-docs-build/sdk-docs-${env.BUILD_ID}"
-              sh "scp ./sdk-docs-${env.BUILD_ID}.tar.gz staging:/var/www/sdk-docs-build/sdk-docs-${env.BUILD_ID}/sdk-docs-${env.BUILD_ID}.tar.gz"
-              sh "ssh staging tar -xf /var/www/sdk-docs-build/sdk-docs-${env.BUILD_ID}/sdk-docs-${env.BUILD_ID}.tar.gz -C /var/www/sdk-docs-build/sdk-docs-${env.BUILD_ID}/"
+              sh "scp ./sdk-docs-${env.BUILD_ID}.tar staging:/var/www/sdk-docs-build/sdk-docs-${env.BUILD_ID}/sdk-docs-${env.BUILD_ID}.tar"
+              sh "ssh staging tar -xf /var/www/sdk-docs-build/sdk-docs-${env.BUILD_ID}/sdk-docs-${env.BUILD_ID}.tar -C /var/www/sdk-docs-build/sdk-docs-${env.BUILD_ID}/"
 
               echo "change sdk-docs symlink"
               sh "ssh staging ln -sfn /var/www/sdk-docs-build/sdk-docs-${env.BUILD_ID} /var/www/sdk-docs"
